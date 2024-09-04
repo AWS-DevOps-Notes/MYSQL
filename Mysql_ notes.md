@@ -3,7 +3,10 @@
 * It is structured query language(SQL), which can we easily manipulate and retrive data.
 * By using mysql we can provide acces particular person.
 
-## RDBMS
+## RDBMS:
+
+* A relational database management system (RDBMS) is a program used to create, update, and manage relational databases.
+* Relation means between any database or tables.
 
 ## SQL Constraints:
 

@@ -3,6 +3,11 @@
 * It is structured query language(SQL), which can we easily manipulate and retrive data.
 * By using mysql we can provide acces particular person.
 
+## What is a Database?
+
+* Database is a collection of data elements.
+* A relational database is collection of related data elements stored in the form of tables(rows and columns)
+
 ## RDBMS:
 
 * A relational database management system (RDBMS) is a program used to create, update, and manage relational databases.
@@ -13,7 +18,7 @@
 * Constraints in SQL are used to define rules for data stored in a table. 
 * They help maintain accuracy, integrity, and reliability by limiting what type of data can be entered into the table. 
 
-### Syntax:
+### Syntax:  
 
 ```
 CREATE TABLE table_name (
@@ -24,7 +29,7 @@ CREATE TABLE table_name (
 );
 ```
 
-### 7 Different Types of Constraints in SQL
+### 7 Different Types of Constraints in SQL [Referhere](https://www.digitalocean.com/community/tutorials/sql-data-types)
 
 1) **`NOT NULL Constraint`**  (Ensures a column cannot have a null (empty) value.)
 2) **`UNIQUE Constraint`** ( Ensures all values in a column are different.)
@@ -44,4 +49,23 @@ The following constraints are commonly used in SQL:
 * `CHECK` - Ensures that the values in a column satisfies a specific condition
 * `DEFAULT` - Sets a default value for a column if no value is specified
 * `CREATE INDEX` - Used to create and retrieve data from the database very quickly
+
+### SQL data types can be broadly divided into the following categories.
+
+1) `Numeric data types` 
+    * INT, TINYINT, BIGINT, FLOAT, REAL, etc.
+2) `Date and Time data types` 
+    * DATE, TIME, DATETIME, etc.
+3) `Character and String data types` 
+    * CHAR, VARCHAR, TEXT, etc.
+4) `Unicode character string data types` 
+    * NCHAR, NVARCHAR, NTEXT, etc.
+5) `Binary data types` 
+    * BINARY, VARBINARY, etc.
+6) `Miscellaneous data types`
+    * CLOB, BLOB, XML, CURSOR, TABLE, etc.
+
+
+
+
 

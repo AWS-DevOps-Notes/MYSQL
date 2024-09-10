@@ -111,8 +111,13 @@ SELECT * FROM employee WHERE commission > salary;
 ### 4) Find the details of employee whose total earnings( commission + salary) is more than 6L ?
 
 #### Query:
+
 ```sql
 SELECT * FROM employee WHERE (commission + salary) > 800000;
+```
+
+```
+
 ```
 ![preview](images/sql12.png)
 

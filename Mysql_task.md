@@ -7,9 +7,9 @@
 #### Query
 
 ```sql
-CREATE DATABASE database1;  
+CREATE DATABASE database1;   #Database created
 ```
-Database created
+* To use Database:
 
 ```sql
 USE database1;

@@ -1,4 +1,4 @@
-## Query Format:
+# Query Format:
 
 ![preview](images/sql4.png)
 
@@ -95,6 +95,7 @@ SELECT * FROM employee WHERE YEAR(Hiredate) < 2007;
 ### 3) find the employee whose job code is 679?
 
 #### Query :
+
 ```sql
 SELECT * FROM job WHERE jcode = 679;
 ```
@@ -103,6 +104,7 @@ SELECT * FROM job WHERE jcode = 679;
 ### 4) Find the details of employee whose commission is more than salary ?
 
 #### Query:
+
 ```sql
 SELECT * FROM employee WHERE commission > salary;
 ```
@@ -152,9 +154,15 @@ SELECT ename,jname,deptno FROM employee, job WHERE  employee.jcode = job.jcode;
 ```
 ![preview](images/sql14.png)
 
-### 4) Display Employee name and Department name for all analysis ?
+### 5) Display Employee name and Department name for all analysis ?
 
 #### Query:
+```
+SELECT ename,dname FROM employee, department WHERE employee.deptno = department.deptno;
+```
+![preview](images/sql16.png)
+
+
 
 
 

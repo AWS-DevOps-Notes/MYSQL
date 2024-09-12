@@ -115,8 +115,14 @@ SELECT * FROM employee WHERE commission > salary;
 #### Query:
 
 ```sql
-SELECT * FROM employee WHERE (commission + salary) > 800000;
+SELECT * FROM employee WHERE (commission + salary) > 600000;
+
+or 
+
+SELECT * FROM employee WHERE commission AND salary > 800000;
 ```
+![preview](images/sql17.png)
+
 
 # 11/09/2024
 

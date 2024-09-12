@@ -116,10 +116,45 @@ SELECT * FROM employee WHERE commission > salary;
 SELECT * FROM employee WHERE (commission + salary) > 800000;
 ```
 
-```
+# 11/09/2024
+
+### 1) Display the Employee name and Job name of all the employees ?
+
+#### Query:
 
 ```
+SELECT ename,jname FROM employee, job WHERE employee.jcode = job.jcode;
+```
 ![preview](images/sql12.png)
+
+### 2) Display department name and its location name for all department ?
+
+#### Query:
+```
+SELECT dname, lname FROM department, location WHERE department.lcode = location.lcode; 
+```
+![preview](images/sql13.png)
+
+
+### 3) Display the Employee name and Job name of all the employees in department number 30 ?
+
+#### Query:
+```
+SELECT ename,jname FROM employee, job WHERE employee.jcode = job.jcode AND deptno = 30;
+```
+![preview](images/sql15.png)
+
+### 4) Display the Employee name, Job name and Department number  of all the employees?
+
+#### Query:
+```
+SELECT ename,jname,deptno FROM employee, job WHERE  employee.jcode = job.jcode;
+```
+![preview](images/sql14.png)
+
+### 4) Display Employee name and Department name for all analysis ?
+
+#### Query:
 
 
 

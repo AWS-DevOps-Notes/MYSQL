@@ -45,11 +45,12 @@ mysql> SHOW TABLES;
 
 **`INSERT`**:
 
-Syntax: INSERT INTO <table_Name> VALUES <(List of values for a row separated by
-commas)>; 
-Ex: Insert the following data into LOCATION table:
-Location Number(lCode) = 122 
-Location Name(lName) = Chicago
+**Syntax**: INSERT INTO <table_Name> VALUES <(List of values for a row separated by
+commas)>;
+
+* Ex: Insert the following data into LOCATION table:
+    Location Number(lCode) = 122 
+    Location Name(lName) = Chicago
 
 ```
 INSERT INTO Location VALUES(122, ‘Chicago’);

@@ -173,23 +173,75 @@ SELECT ename,dname FROM employee, department WHERE employee.deptno = department.
 
 ### 1) Write a query to display all the department names and their location names ?
 
+#### Query:
+``` sql
+SELECT dname, lname FROM department JOIN location ON department.lcode = location.lcode;
+```
+![preview](images/sql18.png)
+
 ### 2) Write a query to display the name, job name, department name and location of every employee ?
+
+#### Query:
+```sql
+SELECT ename, jname, dname, lname FROM employee, job, department, location WHERE employee.jcode=job.jcode AND employee.deptno=department.deptno AND department.lcode=location.lcode;
+
+or
+
+SELECT ename, jname, dname, lname
+FROM employee
+JOIN job ON employee.jcode = job.jcode
+JOIN department ON employee.deptno = department.deptno
+JOIN location ON department.lcode = location.lcode;
+```
+![preview](images/sql19.png)
 
 ### 3) Write a query to display the list of departments with at leat one analyst along with their location name ?
 
+#### Query:
+```sql
+SELECT dname, lname FROM department, location WHERE department.lcode=location.lcode AND dname='Analyst';
+```
+![preview](images/sql20.png)
+
 ### 4) Display list of emp working under either pradeep or srinivas ?
 
-### 5) Display list of employess woho are in accounts department ?
+#### Query:
+```sql
+SELECT * FROM employee WHERE mgrno = 'pradeep' or 'srinivas'; 
+```
+![preview](images/sql21.png)
+
+### 5) Display list of employess who are in accounts department ?
+
+#### Query:
+```sql
+SELECT * FROM employee WHERE deptno = 'Accounting';
+```
+![preview](images/sql22.png)
 
 ### 6) write a query to display the names and salaries of employees in research department ?
 
+#### Query:
+```sql
+SELECT employee.ename, employee.deptno, employee.salary, department.dname FROM employee, department WHERE employee.deptno = department.deptno AND dname = 'Research';
+```
+![preview](images/sql23.png)
+
 ### 7) find the employees who are getting max salary in their respective job ?
 
+#### Query:
+```
+```
 ### 8) Display name of employee whose salary is highest without using MAX() function ?
 
+#### Query:
+```
+```
 ### 9) Write a query to display highest salary department wise and name of employees who is getting salary ?
 
-
+#### Query:
+```
+```
 
 
 

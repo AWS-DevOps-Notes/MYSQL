@@ -179,8 +179,7 @@ SELECT dname, lname FROM department JOIN location ON department.lcode = location
 
 or
 
-SELECT dname, lname FROM department, location WHERE department.lc
-ode=location.lcode;
+SELECT dname, lname FROM department, location WHERE department.lcode=location.lcode;
 ```
 ![preview](images/sql18.png)
 

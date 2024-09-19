@@ -176,6 +176,11 @@ SELECT ename,dname FROM employee, department WHERE employee.deptno = department.
 #### Query:
 ``` sql
 SELECT dname, lname FROM department JOIN location ON department.lcode = location.lcode;
+
+or
+
+SELECT dname, lname FROM department, location WHERE department.lc
+ode=location.lcode;
 ```
 ![preview](images/sql18.png)
 
@@ -199,7 +204,7 @@ JOIN location ON department.lcode = location.lcode;
 
 #### Query:
 ```sql
-SELECT dname, lname FROM department, location WHERE department.lcode=location.lcode AND dname='Analyst';
+ SELECT ename, dname, jname FROM employee JOIN job ON employee.jcode=job.jcode JOIN department ON employee.deptno=department.deptno WHERE job.jname='Analyst';
 ```
 ![preview](images/sql20.png)
 
@@ -207,7 +212,11 @@ SELECT dname, lname FROM department, location WHERE department.lcode=location.lc
 
 #### Query:
 ```sql
-SELECT * FROM employee WHERE mgrno = 'pradeep' or 'srinivas'; 
+SELECT empno,ename FROM employee WHERE mgrno IN(SELECT empno FROM employee WHERE ename  IN ('pradeep', 'srinivas'));
+
+or
+
+SELECT empno,ename FROM employee WHERE mgrno IN(SELECT empno FROM employee WHERE ename = 'pradeep' or 'srinivas');
 ```
 ![preview](images/sql21.png)
 
@@ -215,7 +224,7 @@ SELECT * FROM employee WHERE mgrno = 'pradeep' or 'srinivas';
 
 #### Query:
 ```sql
-SELECT * FROM employee WHERE deptno = 'Accounting';
+SELECT ename, dname FROM employee JOIN department ON employee.deptno=department.deptno WHERE department.dname='Accounting'
 ```
 ![preview](images/sql22.png)
 
@@ -224,24 +233,50 @@ SELECT * FROM employee WHERE deptno = 'Accounting';
 #### Query:
 ```sql
 SELECT employee.ename, employee.deptno, employee.salary, department.dname FROM employee, department WHERE employee.deptno = department.deptno AND dname = 'Research';
+
+or
+
+SELECT ename, salary, dname FROM employee JOIN department ON employee.deptno=department.deptno WHERE department.dname='Research';
 ```
 ![preview](images/sql23.png)
+![preview](images/sql24.png)
 
 ### 7) find the employees who are getting max salary in their respective job ?
 
 #### Query:
+```sql
+SELECT ename,salary,jname FROM employee JOIN job ON employee.jcode=job.jcode WHERE employee.salary=(SELECT MAX(salary) FROM employee WHERE employee.jcode=job.jcode);
 ```
-```
+![preview](images/sql25.png)
+
 ### 8) Display name of employee whose salary is highest without using MAX() function ?
 
 #### Query:
+```sql
+SELECT ename,salary FROM employee WHERE salary=(SELECT MAX(salary) FROM employee );
+
+or 
+
+SELECT ename FROM employee JOIN job ON employee.jcode=job.jcode WHERE employee.salary=(SELECT MAX(salary) FROM employee);  
 ```
-```
+![preview](images/sql26.png)
+
 ### 9) Write a query to display highest salary department wise and name of employees who is getting salary ?
 
 #### Query:
+```sql
+# To know all department employee salaries
+
+SELECT ename,dname,salary FROM employee JOIN department ON employee.deptno=department.deptno; 
+
+# To know department wise highest salary to employees 
+
+SELECT ename,dname,salary FROM employee JOIN department ON employee.deptno=department.deptno WHERE employee.salary=(SELECT MAX(salary) FROM e
+mployee WHERE employee.deptno=department.deptno);
 ```
-```
+![preview](images/sql27.png)
+
+
 
 
 

@@ -264,7 +264,7 @@ SELECT ename FROM employee JOIN job ON employee.jcode=job.jcode WHERE employee.s
 
 #### Query:
 ```sql
-# To know all department employee salaries
+# To know all departments employees salaries
 
 SELECT ename,dname,salary FROM employee JOIN department ON employee.deptno=department.deptno; 
 

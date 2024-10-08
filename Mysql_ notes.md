@@ -66,6 +66,21 @@ The following constraints are commonly used in SQL:
     * CLOB, BLOB, XML, CURSOR, TABLE, etc.
 
 
+### Ascending Order in sql:
+
+* The **`ORDER BY`** keyword sorts the records in `ascending order` by default. 
+* To sort the records in `descending order`, use the **`DESC`** keyword.
+
+* To use ascending and descending at a time, use order by
+    ```sql
+    SELECT * FROM table_name ORDER BY column1 ASC, column2 DESC;
+    ```
+## To clear sql screen
+
+**command**: `\! cls`
+
+
+
 
 
 

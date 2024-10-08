@@ -270,8 +270,8 @@ SELECT ename,dname,salary FROM employee JOIN department ON employee.deptno=depar
 
 # To know department wise highest salary to employees 
 
-SELECT ename,dname,salary FROM employee JOIN department ON employee.deptno=department.deptno WHERE employee.salary=(SELECT MAX(salary) FROM e
-mployee WHERE employee.deptno=department.deptno);
+SELECT ename,dname,salary FROM employee JOIN department ON employee.deptno=department.deptno WHERE employee.salary=(SELECT MAX(salary) FROM employee WHERE employee.deptno=department.deptno);
+
 ```
 ![preview](images/sql27.png)
 
